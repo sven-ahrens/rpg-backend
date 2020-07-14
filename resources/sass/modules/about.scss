@@ -1,0 +1,26 @@
+.about {
+    background-color: rgba(18, 18, 18, 1);
+    color: white;
+    padding: 20px;
+
+    h1 {
+        margin: 0;
+        text-align: center;
+    }
+
+    h2 {
+        color: $rpg-red;
+    }
+
+    .features {
+        width: 100%;
+
+        @media (min-width: $sm-breakpoint) {
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin: 50px auto 0;
+            grid-gap: 30px;
+        }
+    }
+}

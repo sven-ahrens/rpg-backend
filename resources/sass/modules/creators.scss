@@ -1,0 +1,33 @@
+.creators {
+    padding: 10px;
+    background: #DCDCDC;
+
+    h1 {
+        text-align: center;
+        color: rgba(238, 127, 76, 1);
+    }
+
+    img {
+        width: 200px;
+        border-radius: 50%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .cards {
+        @media (min-width: $sm-breakpoint) {
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: calc(50% - 20px) calc(50% - 20px);
+        }
+
+        h2 {
+            text-align: center;
+            color: rgba(27, 28, 78, 1);
+        }
+
+        p {
+            padding: 10px;
+        }
+    }
+}

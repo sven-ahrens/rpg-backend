@@ -1,100 +1,139 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+    <title>rpg</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}?v=1{{ time() }}">
+</head>
+<body>
+@include('header')
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+<main>
 
-            .full-height {
-                height: 100vh;
-            }
+    <section class="heroarea">
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+        <picture class="heroarea__image">
+            <img alt="" src="{{ asset('images/startpage.jpeg') }}"/>
+        </picture>
 
-            .position-ref {
-                position: relative;
-            }
+        <!-- <h1 class="heroarea__text">
+            <span class="row1">Release your fantasy</span>
+            <span class="row2">Create YOUR RPG</span>
+            <span class="row3">Or JOIN an adventure</span>
+        </h1> -->
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
+    </section>
 
-            .content {
-                text-align: center;
-            }
+    <section class="about">
 
-            .title {
-                font-size: 84px;
-            }
+        <h1>Erkundet das Jenseits EURER Geschichten</h1>
 
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
+        <div class="features">
 
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
+            <div>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
+                <h2>Erstelle deine Geschichte</h2>
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
+                <p>
+                    Ob RPG, Fan-Fictions oder anderen Geschichten, hier kannst Du deiner Kreativität freien
+                    lauf lassen!
+                </p>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+            </div>
+
+            <div>
+
+                <h2>Nimm an RPGs anderer Teil</h2>
+
+                <p>
+                    Zu faul Dir etwas eigenes auszudenken? Dir gefällt ein bestehendes RPG?
+                    Nimm dran teil und erkunde die Welten anderer Dimensionen!
+                </p>
+
+            </div>
+
+            <div>
+
+                <h2>Profil-Anpassungen</h2>
+
+                <p>
+                    Ob schlichtes Design oder ein Drache der sich um deinen Hals schmiegt,
+                    passe dein Profil so an, wie Du es willst und wie die Abenteurer dieser Seite
+                    dich in Erinnerung behalten sollen!
+                </p>
+
+            </div>
+
+            <div>
+
+                <h2>Belohnungssystem</h2>
+
+                <p>
+                    Deine Kreativität und Mühen sollen wertgeschätzt werden, deshalb gibt es bei uns
+                    hunderte von Belohnungen die Du Dir verdienen kannst, wenn Du aktiv auf unserer Seite
+                    bist!
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="creators">
+        <h1>Wer steckt hinter der Seite?</h1>
+        <div class="cards">
+            <div class="card">
+                <h2>Kaye, nikame_coleya</h2>
+                <img alt="Kaye, Gründerin, Authorin" src="{{ asset('images/kaye.jpg') }}" />
+                <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                    ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                </p>
+            </div>
+            <div class="card">
+                <h2>Sven, Suben</h2>
+                <img alt="Sven, Entwickler" src="{{ asset('images/sven.jpg') }}" />
+                <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                    ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                </p>
             </div>
         </div>
-    </body>
+    </section>
+
+</main>
+
+<footer>
+    <nav>
+        <ul>
+            <li>
+                <a href="https://twitter.com/RPGames_online" target="_blank">
+                    <img alt="Twitter" src="{{ asset('images/twitter.svg') }}"/>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div>
+        <h3>Feedback oder Fragen? Zögere nicht uns zu schreiben!</h3>
+        <p>
+            <a href="hello@rpgames.online">hello@rpgames.online</a>
+        </p>
+    </div>
+</footer>
+
+</body>
 </html>
