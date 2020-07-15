@@ -1,0 +1,67 @@
+.account {
+    height: calc(100vh - 135px);
+    background-image: url('/images/startpage.jpeg');
+    background-size:cover;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+    .loginarea {
+        &__form {
+            background: #fff;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            padding: 2rem;
+            border-radius: 8px;
+            input {
+                width: 100%;
+                margin-bottom: 2rem;
+                font-family: 'Fira Sans', sans-serif;
+                padding: .5rem;
+                box-sizing: border-box;
+                border-radius: 2px;
+                border-width: 0 0 1px 0;
+                &[type="submit"] {
+                    background: #4776e6;
+                    border: 0px;
+                    color: #fff;
+                    padding: 1rem .5rem;
+                }
+            }
+        }
+        &__actions {
+            margin-top: 2rem;
+            font-size: .85rem;
+            color: #fff;
+            text-align: center;
+            a {
+                color: #FFC837
+            }
+        }
+    }
+
+    // Helper
+
+    .visuallyhidden {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    .visuallyhidden.focusable:active,
+    .visuallyhidden.focusable:focus {
+        clip: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        position: static;
+        width: auto;
+    }
+}

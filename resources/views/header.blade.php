@@ -7,10 +7,10 @@
     </button>
     <ul>
         <li>
-            <a href="#">Sign in</a>
+            <a href="/login">Sign in</a>
         </li>
         <li>
-            <a href="#">Sign up</a>
+            <a href="/account/creation">Sign up</a>
         </li>
         <li class="list-item--short">
             <a href="#">DE</a>

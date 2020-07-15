@@ -1,8 +1,9 @@
 @import './_variables';
 @import './_typo';
 @import '_normalize';
-@import './modules/header.scss';
-@import './modules/sidebar.scss';
-@import './modules/about.scss';
-@import './modules/footer.scss';
-@import './modules/creators.scss';
+@import './modules/header';
+@import './modules/sidebar';
+@import './modules/footer';
+@import './views/about';
+@import './views/creators';
+@import './views/account';
