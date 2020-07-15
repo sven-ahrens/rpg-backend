@@ -4,28 +4,22 @@
 
     <main class="account">
 
-        <form class="loginarea__form">
+        <form class="signuparea__form" method="POST" action="/account/creation">
 
-            <h1>Login</h1>
+            <h1>Sign up</h1>
 
             <label class="visuallyhidden" for="username">Username</label>
-            <input type="text" name="username" placeholder="Username" />
+            <input id="username" type="text" name="username" placeholder="Username" />
 
-            <label class="visuallyhidden"  for="password">Email</label>
-            <input type="text" name="email" placeholder="Email" />
+            <label class="visuallyhidden"  for="email">Email</label>
+            <input id="email" type="text" name="email" placeholder="Email" />
+
             <label class="visuallyhidden"  for="password">Password</label>
+            <input id="password" type="Password" name="password" placeholder="Password" />
 
-            <input type="Password" name="password" placeholder="Password" />
             <input type="submit" value="Login">
 
         </form>
-
-        <div class="loginarea__actions">
-
-            <p>Passwort vergessen? Kein Problem - <a href="#">Jetzt zurücksetzen</a></p>
-            <p>Noch nicht registriert? <a href="#">Jetzt registrieren</a></p>
-
-        </div>
 
     </main>
 

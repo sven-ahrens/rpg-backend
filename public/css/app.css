@@ -672,13 +672,13 @@ footer a:link {
   justify-content: center;
   flex-direction: column;
 }
-.account .loginarea__form {
+.account .signuparea__form {
   background: #fff;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   padding: 2rem;
   border-radius: 8px;
 }
-.account .loginarea__form input {
+.account .signuparea__form input {
   width: 100%;
   margin-bottom: 2rem;
   font-family: "Fira Sans", sans-serif;
@@ -687,19 +687,19 @@ footer a:link {
   border-radius: 2px;
   border-width: 0 0 1px 0;
 }
-.account .loginarea__form input[type=submit] {
+.account .signuparea__form input[type=submit] {
   background: #4776e6;
   border: 0px;
   color: #fff;
   padding: 1rem 0.5rem;
 }
-.account .loginarea__actions {
+.account .signuparea__actions {
   margin-top: 2rem;
   font-size: 0.85rem;
   color: #fff;
   text-align: center;
 }
-.account .loginarea__actions a {
+.account .signuparea__actions a {
   color: #FFC837;
 }
 .account .visuallyhidden {
@@ -714,6 +714,66 @@ footer a:link {
 }
 .account .visuallyhidden.focusable:active,
 .account .visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+.login {
+  height: calc(100vh - 135px);
+  background-image: url("/images/startpage.jpeg");
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.login .loginarea__form {
+  background: #fff;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  padding: 2rem;
+  border-radius: 8px;
+}
+.login .loginarea__form input {
+  width: 100%;
+  margin-bottom: 2rem;
+  font-family: "Fira Sans", sans-serif;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  border-radius: 2px;
+  border-width: 0 0 1px 0;
+}
+.login .loginarea__form input[type=submit] {
+  background: #4776e6;
+  border: 0px;
+  color: #fff;
+  padding: 1rem 0.5rem;
+}
+.login .loginarea__actions {
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #fff;
+  text-align: center;
+}
+.login .loginarea__actions a {
+  color: #FFC837;
+}
+.login .visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.login .visuallyhidden.focusable:active,
+.login .visuallyhidden.focusable:focus {
   clip: auto;
   height: auto;
   margin: 0;
