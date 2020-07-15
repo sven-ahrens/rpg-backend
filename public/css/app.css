@@ -608,6 +608,13 @@ footer a:link {
   color: #ee7f4c;
 }
 
+.errors {
+  background: #c56c63;
+  color: white;
+  padding: 10px;
+  width: 100%;
+}
+
 .about {
   background-color: #121212;
   color: white;

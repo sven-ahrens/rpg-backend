@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,13 +15,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    if (Auth::user()) {
+        return view('forum');
+    }
+
     return view('welcome');
 });
 
 Route::get('login', function () {
     return view('login');
 });
+Route::post('login', 'LoginController')->name('login');
 
 Route::get('account/creation', function () {
     return view('account');
 });
+Route::post('account/creation', 'SignupController');
