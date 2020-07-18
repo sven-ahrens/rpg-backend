@@ -6,7 +6,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
     use Notifiable;
 
@@ -21,7 +21,7 @@ class User extends Authenticatable
 
     /**
      * The attributes that should be hidden for arrays.
-     *
+     *EventServiceProvider
      * @var array
      */
     protected $hidden = [
@@ -36,4 +36,49 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function threads()
+    {
+        return $this->belongsToMany('App\Thread', 'user_thread')->using('App\UserThread');
+    }
+
+    public function achievements()
+    {
+        return $this->belongsToMany('App\Achievement', 'user_achievement');
+    }
+
+    public function notifications()
+    {
+        return $this->hasMany('App\Notification');
+    }
+
+    public function posts()
+    {
+        return $this->hasMany('App\Post');
+    }
+
+    public function bans()
+    {
+        return $this->belongsToMany('App\Report', 'admonition');
+    }
+
+    public function admonitions()
+    {
+        return $this->belongsToMany('App\Report', 'admonition');
+    }
+
+    public function roles()
+    {
+        return $this->belongsToMany('App\Role', 'user_role');
+    }
+
+    public function messages()
+    {
+        return $this->hasMany('App\Message', 'recipient_id');
+    }
+
+    public function messagesSend()
+    {
+        return $this->hasMany('App\Message', 'sender_id');
+    }
 }

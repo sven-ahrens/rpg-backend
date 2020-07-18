@@ -38,13 +38,16 @@
   src: local("Fira Sans Bold"), local("FiraSans-Bold"), url("../fonts/fira-sans-v10-latin/fira-sans-v10-latin-700.eot?#iefix") format("embedded-opentype"), url("../fonts/fira-sans-v10-latin/fira-sans-v10-latin-700.woff2") format("woff2"), url("../fonts/fira-sans-v10-latin/fira-sans-v10-latin-700.woff") format("woff"), url("../fonts/fira-sans-v10-latin/fira-sans-v10-latin-700.ttf") format("truetype"), url("../fonts/fira-sans-v10-latin/fira-sans-v10-latin-700.svg#FiraSans") format("svg");
   /* Legacy iOS */
 }
+:root {
+  background-color: white;
+  color: #1b191a;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  background: white;
-  color: #1b191a;
   padding: 0;
   margin: 0;
   line-height: 1.7;
@@ -498,7 +501,7 @@ template {
 }
 .navigation--mobile ul li {
   padding: 5px;
-  width: 100%;
+  width: auto;
   text-align: center;
   font-size: 2em;
 }
@@ -534,14 +537,16 @@ template {
     padding: 5px;
     font-size: 1em;
     text-align: left;
-    width: 100%;
-    max-width: 120px;
+    width: auto;
   }
   .navigation ul li.list-item--short {
     max-width: 60px;
   }
   .navigation ul li:first-child {
     margin-left: auto;
+  }
+  .navigation ul li:not(:nth-last-child(-1n+2)) {
+    margin-right: 10px;
   }
   .navigation ul a {
     color: #1b1c4e;

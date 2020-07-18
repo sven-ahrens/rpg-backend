@@ -14,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*
+|--------------------------------------------------------------------------
+| Default routes. No authentication needed
+|--------------------------------------------------------------------------
+*/
 Route::get('/', function () {
     if (Auth::user()) {
         return view('forum');
@@ -21,13 +26,29 @@ Route::get('/', function () {
 
     return view('welcome');
 });
-
 Route::get('login', function () {
     return view('login');
 });
-Route::post('login', 'LoginController')->name('login');
-
 Route::get('account/creation', function () {
     return view('account');
 });
+Route::post('login', 'LoginController')->name('login');
 Route::post('account/creation', 'SignupController');
+
+/*
+|--------------------------------------------------------------------------
+| User routes. Only accessible when logged in
+|--------------------------------------------------------------------------
+*/
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/profile', function () {
+        // TODO:: return profile view
+    });
+    Route::get('/notifications', function () {
+        // TODO:: return profile view
+    });
+    Route::get('/messages', function () {
+        // TODO:: return profile view
+    });
+    Route::get('/logout', 'LogoutController');
+});

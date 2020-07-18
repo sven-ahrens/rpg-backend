@@ -114,7 +114,7 @@
 
             li {
                 padding: 5px;
-                width: 100%;
+                width: auto;
                 text-align: center;
                 font-size: 2em;
             }
@@ -156,8 +156,7 @@
                 padding: 5px;
                 font-size: 1em;
                 text-align: left;
-                width: 100%;
-                max-width: 120px;
+                width: auto;
 
                 &.list-item--short {
                     max-width: 60px;
@@ -165,6 +164,10 @@
 
                 &:first-child {
                     margin-left: auto;
+                }
+
+                &:not(:nth-last-child(-1n+2)) {
+                    margin-right: 10px;
                 }
             }
 

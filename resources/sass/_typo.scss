@@ -54,13 +54,16 @@
     url('../fonts/fira-sans-v10-latin/fira-sans-v10-latin-700.svg#FiraSans') format('svg'); /* Legacy iOS */
 }
 
+:root {
+    background-color: white;
+    color: $rpg-main-color;
+}
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    background: $rpg-background;
-    color: $rpg-main-color;
     padding: 0;
     margin: 0;
     line-height: 1.7;
