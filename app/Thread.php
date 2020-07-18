@@ -19,7 +19,7 @@ class Thread extends Model
 
     public function users()
     {
-        return $this->belongsToMany('App\User')->using('App\UserThread');
+        return $this->belongsToMany('App\User');
     }
 
     public function posts()

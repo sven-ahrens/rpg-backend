@@ -39,7 +39,7 @@ class User extends Authenticatable implements MustVerifyEmail
 
     public function threads()
     {
-        return $this->belongsToMany('App\Thread', 'user_thread')->using('App\UserThread');
+        return $this->belongsToMany('App\Thread', 'user_thread');
     }
 
     public function achievements()
